@@ -169,6 +169,9 @@ aside {
 .titles h2 {
   color: var(--blue-color);
 }
+.arrow-down {
+  display: none;
+}
 
 /* ---- ABOUT ---- */
 .about {
@@ -328,6 +331,19 @@ form button:hover {
   padding: 5px 10px;
 }
 
+/* ---- CONTACT ---- */
+footer {
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-size: 14px;
+  color: white;
+}
+
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
 /* ---------------- MEDIA QUERIES-------------------- */
@@ -368,7 +384,6 @@ form button:hover {
   .container-skills li {
     min-width: 30%;
   }
-  /* MENU HAMB */
 }
 @media (max-width: 480px) {
   #topButton {
@@ -390,6 +405,7 @@ form button:hover {
   }
   .navbar {
     height: 20vh;
+    display: none;
   }
   .navbar ul {
     flex-direction: column;
@@ -400,6 +416,13 @@ form button:hover {
     margin: 2vh 4vw;
   }
   .main-section {
-    margin-top: -30px;
+    padding-bottom: 0;
+  }
+  .arrow-down {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
   }
 }
