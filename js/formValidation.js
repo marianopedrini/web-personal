@@ -1,25 +1,3 @@
-/* ---- TOP BUTTON ---- */
-const topButton = document.getElementById("topButton");
-
-// Al bajar 20px se hace visible el boton
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 20) {
-    topButton.style.display = "block";
-  } else {
-    topButton.style.display = "none";
-  }
-}
-
-// Funcion de scroll hacia el top de la pag
-function goToTop() {
-  document.body.scrollTop = 0; // Para Safari
-  document.documentElement.scrollTop = 0; // Para los demas
-}
-
 /* ---- FORM ---- */
 const formContact = document.getElementById("formContact");
 

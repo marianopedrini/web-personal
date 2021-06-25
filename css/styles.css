@@ -269,6 +269,20 @@ aside {
 .react-color {
   color: #2fcbf7;
 }
+
+.animated {
+  opacity: 0;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /* ---- CONTACT ---- */
 
 .contact {
