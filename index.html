@@ -168,7 +168,11 @@
       <section class="contact" id="contact">
         <div class="container-form">
           <h3>Contactame</h3>
-          <form action="#" id="formContact">
+          <form
+            action="https://formspree.io/f/xvoddzqp"
+            method="POST"
+            id="formContact"
+          >
             <div class="camp-form">
               <input type="text" name="name" id="name" placeholder="Nombre" />
               <div class="error" id="errorName"></div>
@@ -192,6 +196,22 @@
             </div>
             <button type="submit">Enviar</button>
           </form>
+          <div class="ok-message" id="message">
+            <i class="fas fa-times ok-message__close"></i>
+            <div>
+              <p id="successMsg" style="display: none">
+                Mensaje enviado! En breve estaré leyendo tu mensaje. <br />
+                Gracias!
+              </p>
+              <p id="errorMsg" style="display: none">
+                Ups! Ha ocurrido un error al intentar enviar el mensaje.
+                Contactame por otro medio como mi
+                <a href="https://www.linkedin.com/in/mariano-pedrini-1a6a701a6/"
+                  >Linkedin</a
+                >
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

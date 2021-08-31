@@ -79,18 +79,54 @@ textarea.addEventListener("keyup", validateCamp);
 textarea.addEventListener("blur", validateCamp);
 
 formContact.addEventListener("submit", (e) => {
-  e.preventDefault();
-
   if (!camps.name) {
     errorName.textContent = "Debes completar con un nombre";
-    console.log("name");
+    e.preventDefault();
   }
   if (!camps.email) {
     errorEmail.textContent = "Debes ingresar un email";
-    console.log("email");
+    e.preventDefault();
   }
   if (!camps.message) {
     errorMessage.textContent = "Ingresa el motivo de tu contacto";
-    console.log("mensaje");
+    e.preventDefault();
   }
 });
+formContact.addEventListener("submit", handleSubmit);
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = new FormData(this);
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+  if (response.ok) {
+    this.reset();
+    showMessage();
+  } else {
+    showErrorMessage();
+  }
+}
+
+let xCloseMessage = document.querySelector(".ok-message__close");
+let message = document.querySelector(".ok-message");
+
+xCloseMessage.addEventListener("click", function () {
+  message.classList.toggle("show-message");
+});
+
+function showMessage() {
+  document.getElementById("errorMsg").style.display = "none";
+  document.getElementById("successMsg").style.display = "block";
+  message.classList.toggle("show-message");
+}
+
+function showErrorMessage() {
+  document.getElementById("successMsg").style.display = "none";
+  document.getElementById("errorMsg").style.display = "block";
+  message.classList.toggle("show-message");
+}

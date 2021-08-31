@@ -15,6 +15,7 @@ function scrollFunction() {
 }
 
 // Funcion de scroll hacia el top de la pag
+topButton.addEventListener("click", goToTop);
 function goToTop() {
   document.body.scrollTop = 0; // Para Safari
   document.documentElement.scrollTop = 0; // Para los demas
