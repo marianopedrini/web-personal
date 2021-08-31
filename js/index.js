@@ -20,6 +20,26 @@ function goToTop() {
   document.documentElement.scrollTop = 0; // Para los demas
 }
 
+/* ---- HAMB MENU ---- */
+hambIcon = document.querySelector(".hamb-menu__icon");
+hambNav = document.querySelector(".hamb-menu__nav");
+hambLink = document.querySelectorAll(".hamb-menu__nav a");
+
+hambLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    hambNav.classList.toggle("show");
+    hambIcon.classList.toggle("change");
+  });
+});
+
+hambIcon.addEventListener("click", function () {
+  hambNav.classList.toggle("show");
+});
+
+hambIcon.addEventListener("click", () => {
+  hambIcon.classList.toggle("change");
+});
+
 /* ---- SKILLS ANIMATION ---- */
 
 const boxes = document.querySelectorAll(".animated");
