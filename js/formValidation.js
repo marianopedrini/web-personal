@@ -92,6 +92,7 @@ formContact.addEventListener("submit", (e) => {
     e.preventDefault();
   }
 });
+
 formContact.addEventListener("submit", handleSubmit);
 
 async function handleSubmit(event) {
@@ -107,8 +108,6 @@ async function handleSubmit(event) {
   if (response.ok) {
     this.reset();
     showMessage();
-  } else {
-    showErrorMessage();
   }
 }
 
@@ -120,13 +119,5 @@ xCloseMessage.addEventListener("click", function () {
 });
 
 function showMessage() {
-  document.getElementById("errorMsg").style.display = "none";
-  document.getElementById("successMsg").style.display = "block";
-  message.classList.toggle("show-message");
-}
-
-function showErrorMessage() {
-  document.getElementById("successMsg").style.display = "none";
-  document.getElementById("errorMsg").style.display = "block";
   message.classList.toggle("show-message");
 }

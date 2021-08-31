@@ -406,6 +406,9 @@ form button {
 form button:hover {
   background-color: #037b99;
 }
+form button:active {
+  transform: translateY(2px);
+}
 .error {
   color: red;
   padding: 5px 10px;
@@ -445,11 +448,6 @@ form button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-.ok-message a {
-  color: var(--blue-color);
-  font-weight: 900;
-  text-decoration: underline;
 }
 /* ---- FOOTER ---- */
 footer {
