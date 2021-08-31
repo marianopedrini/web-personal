@@ -552,4 +552,11 @@ footer p {
     font-size: 35px;
     margin-bottom: 10px;
   }
+  .container-skills li {
+    width: 150px;
+    height: 150px;
+  }
+  .container-skills li i {
+    font-size: 80px;
+  }
 }
