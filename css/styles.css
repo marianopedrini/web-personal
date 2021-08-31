@@ -111,7 +111,6 @@ body::-webkit-scrollbar-thumb {
   margin: auto;
   background-color: rgba(0, 0, 0, 0.9);
   border-left: 1px solid var(--blue-color);
-  border-bottom: 1px solid var(--blue-color);
   transition: all 1.5s ease-out;
   display: flex;
   flex-direction: column;
