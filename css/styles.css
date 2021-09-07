@@ -354,6 +354,65 @@ aside {
   }
 }
 
+/* ---- PROJECTS ---- */
+.projects {
+  padding: 10vh 0;
+}
+.projects h3{
+  text-align: center;
+  font-size: 40px;
+}
+.container-projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+.container-projects article {
+  width: 400px;
+  height: 430px;
+}
+.eos {
+  background-image: url(../images/eos.png);
+  /* background-size: cover; */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.logo-eos{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out;
+  border-radius: 5px;
+}
+.eos-img{
+  height: 60%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 90px;
+}
+.eos-img img{
+  width: 100%;
+  align-self: flex-end;
+}
+.logo-eos p{
+  height: 40%;
+  text-align: center;
+  margin: 20px 40px 0;
+  padding-top: 40px;
+  color: white;
+  font-size: 13px;
+}
+.logo-eos:hover{
+  opacity: 0;
+}
 /* ---- CONTACT ---- */
 
 .contact {
@@ -558,5 +617,16 @@ footer p {
   }
   .container-skills li i {
     font-size: 80px;
+  }
+  .container-projects article{
+    width: 300px;
+    height: 323px;
+  }
+  .logo-eos p{
+    padding-top: 0;
+    font-size: 12px;
+  }
+  .eos-img{
+    padding-bottom: 30px;
   }
 }
