@@ -1,6 +1,6 @@
 :root {
-  --font-title: "Helvetica", "Arial", sans-serif;
-  --font-text: "Jost", sans-serif;
+  --font-title: 'Helvetica', 'Arial', sans-serif;
+  --font-text: 'Jost', sans-serif;
   --blue-color: #00acd7;
 }
 * {
@@ -358,11 +358,11 @@ aside {
 .projects {
   padding: 10vh 0;
 }
-.projects h3{
+.projects h3 {
   text-align: center;
   font-size: 40px;
 }
-.container-projects{
+.container-projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -371,6 +371,7 @@ aside {
 .container-projects article {
   width: 400px;
   height: 430px;
+  margin: 0 20px 30px;
 }
 .eos {
   background-image: url(../images/eos.png);
@@ -381,10 +382,19 @@ aside {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
-.logo-eos{
+.lpharma {
+  background-image: url(../images/lpharma.png);
+  /* background-size: cover; */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.logo-project {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -392,25 +402,27 @@ aside {
   transition: opacity 0.5s ease-out;
   border-radius: 5px;
 }
-.eos-img{
+.project-img {
   height: 60%;
   display: flex;
   align-items: flex-end;
   padding: 0 90px;
 }
-.eos-img img{
+.project-img img {
   width: 100%;
   align-self: flex-end;
+  margin-bottom: 10px;
 }
-.logo-eos p{
+.text-project {
   height: 40%;
+}
+.logo-project p {
   text-align: center;
   margin: 20px 40px 0;
-  padding-top: 40px;
-  color: white;
-  font-size: 13px;
+  padding-top: 20px;
+  font-size: 15px;
 }
-.logo-eos:hover{
+.logo-project:hover {
   opacity: 0;
 }
 /* ---- CONTACT ---- */
@@ -618,15 +630,28 @@ footer p {
   .container-skills li i {
     font-size: 80px;
   }
-  .container-projects article{
+  .container-projects article {
     width: 300px;
     height: 323px;
   }
-  .logo-eos p{
+  .logo-eos p {
     padding-top: 0;
     font-size: 12px;
   }
-  .eos-img{
+  .eos-img {
     padding-bottom: 30px;
+  }
+  .project-img {
+    height: 40%;
+  }
+  .text-project {
+    height: 60%;
+  }
+  .logo-project p {
+    padding-top: 0;
+    margin: 20px 20px 0;
+  }
+  .project-img img {
+    margin-bottom: 0;
   }
 }
