@@ -32,8 +32,8 @@ body::-webkit-scrollbar-track {
   background-color: black;
 }
 body::-webkit-scrollbar {
-  width: 0.5vw;
-  display: none;
+  width: 15px;
+  /* display: none; */
 }
 body::-webkit-scrollbar-thumb {
   background-color: #05738f;
@@ -259,6 +259,10 @@ aside {
   width: 400px;
   border-radius: 5px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.container-img img:hover {
+  transform: scale(1.02) rotate(-1deg);
 }
 .container-desc {
   margin: auto;
@@ -286,21 +290,26 @@ aside {
   font-size: 40px;
 }
 .container-skills {
+  margin: auto;
+  max-width: 900px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2vh;
+  margin-top: 30px;
   color: #037b99;
+  gap: 30px;
 }
 .container-skills li {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5vh 2vw;
+
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 15px;
-  width: 200px;
-  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s ease-in-out;
 }
@@ -340,6 +349,15 @@ aside {
 .react-color {
   color: #2fcbf7;
 }
+.bootstrap-color {
+  color: #7952b3;
+}
+.laravel-color {
+  color: #ff2d20;
+}
+.mysql-color {
+  color: #505050;
+}
 
 .animated {
   opacity: 0;
@@ -373,37 +391,22 @@ aside {
   height: 430px;
   margin: 0 20px 30px;
 }
-.eos {
-  background-image: url(../images/eos.png);
-  /* background-size: cover; */
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-.lpharma {
-  background-image: url(../images/lpharma.png);
-  /* background-size: cover; */
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-.logo-project {
+.project {
   height: 100%;
   width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease-out;
+  padding: 30px 0;
+  justify-content: space-evenly;
   border-radius: 5px;
 }
+.project:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+}
+
 .project-img {
-  height: 60%;
   display: flex;
   align-items: flex-end;
   padding: 0 90px;
@@ -416,14 +419,22 @@ aside {
 .text-project {
   height: 40%;
 }
-.logo-project p {
+.project p {
   text-align: center;
-  margin: 20px 40px 0;
+  margin: 0 40px;
   padding-top: 20px;
   font-size: 15px;
 }
-.logo-project:hover {
-  opacity: 0;
+.project-links i {
+  color: rgb(100, 100, 100);
+  font-size: 40px;
+  margin: 0 15px;
+}
+.project-links i:hover {
+  color: #037b99;
+}
+.project-links .fa-link {
+  font-size: 36px;
 }
 /* ---- CONTACT ---- */
 
@@ -619,20 +630,18 @@ footer p {
   .arrow-down {
     display: block;
     color: white;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: 15px;
     text-align: center;
     font-size: 35px;
-    margin-bottom: 10px;
   }
   .container-skills li {
     width: 150px;
-    height: 150px;
+    min-height: 150px;
   }
   .container-skills li i {
     font-size: 80px;
-  }
-  .container-projects article {
-    width: 300px;
-    height: 323px;
   }
   .logo-eos p {
     padding-top: 0;
@@ -647,7 +656,7 @@ footer p {
   .text-project {
     height: 60%;
   }
-  .logo-project p {
+  .project p {
     padding-top: 0;
     margin: 20px 20px 0;
   }
