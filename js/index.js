@@ -1,5 +1,5 @@
 /* ---- TOP BUTTON ---- */
-const topButton = document.getElementById("topButton");
+const topButton = document.getElementById('topButton');
 
 // Al bajar 20px se hace visible el boton
 window.onscroll = function () {
@@ -8,9 +8,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 20) {
-    topButton.style.display = "block";
+    topButton.style.display = 'block';
   } else {
-    topButton.style.display = "none";
+    topButton.style.display = 'none';
   }
 }
 
@@ -21,28 +21,28 @@ function goToTop() {
 }
 
 /* ---- HAMB MENU ---- */
-hambIcon = document.querySelector(".hamb-menu__icon");
-hambNav = document.querySelector(".hamb-menu__nav");
-hambLink = document.querySelectorAll(".hamb-menu__nav a");
+hambIcon = document.querySelector('.hamb-menu__icon');
+hambNav = document.querySelector('.hamb-menu__nav');
+hambLink = document.querySelectorAll('.hamb-menu__nav a');
 
 hambLink.forEach((link) => {
-  link.addEventListener("click", function () {
-    hambNav.classList.toggle("show");
-    hambIcon.classList.toggle("change");
+  link.addEventListener('click', function () {
+    hambNav.classList.toggle('show');
+    hambIcon.classList.toggle('change');
   });
 });
 
-hambIcon.addEventListener("click", function () {
-  hambNav.classList.toggle("show");
+hambIcon.addEventListener('click', function () {
+  hambNav.classList.toggle('show');
 });
 
-hambIcon.addEventListener("click", () => {
-  hambIcon.classList.toggle("change");
+hambIcon.addEventListener('click', () => {
+  hambIcon.classList.toggle('change');
 });
 
 /* ---- SKILLS ANIMATION ---- */
 
-const boxes = document.querySelectorAll(".animated");
+const boxes = document.querySelectorAll('.animated');
 
 const showScroll = () => {
   let scrollTop = document.documentElement.scrollTop;
@@ -54,10 +54,13 @@ const showScroll = () => {
 
     if (distance < scrollTop) {
       box.style.opacity = 1;
-      box.style.transition = "all 1s";
-      box.style.animation = "slide 2s";
+      box.style.transition = 'all 1s';
+      box.style.animation = 'slide 2s';
     }
   }
 };
 
-window.addEventListener("scroll", showScroll);
+window.addEventListener('scroll', showScroll);
+
+const copyright = document.getElementById('copyright');
+copyright.innerHTML = `© ${new Date().getFullYear()} Mariano Nicolas Pedrini`;
